@@ -1,0 +1,39 @@
+.estilo {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 225px; 
+}
+
+
+.estiloTitulo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: wheat;
+  font-size: xx-large;
+  height: 7vh;
+}
+
+.estiloLogin {
+  align-items: center;
+  height: 3.5vh;
+}
+
+.estiloMensagem {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: x-large;
+  font-style: italic;
+  color: whitesmoke;
+  position: center;
+  margin-bottom: 0;
+  margin-top: 3vh;
+
+}
+
+.background-component {
+  background-image: url("https://i.pinimg.com/originals/be/e0/b4/bee0b41561164c5cf6318c0be184b195.jpg");
+
+  height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
