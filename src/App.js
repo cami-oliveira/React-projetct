@@ -18,7 +18,6 @@ class App extends Component {
 
     this.change = this.change.bind(this)
     this.validation = this.validation.bind(this)
-    
   }
 
   change(event) {
