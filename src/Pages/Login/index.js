@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../Firebase';
-
+import App from '../../App.css';
 
 class Login extends Component {
 
@@ -12,7 +12,7 @@ class Login extends Component {
       title: "Login",
       email: "",
       password: "",
-      message: "Você ainda não está cadastrado."
+      message: "Você ainda não possui um cadastro? Cadastre-se aqui!"
     }
 
     this.change = this.change.bind(this)
@@ -52,8 +52,14 @@ class Login extends Component {
               type="password" size="25" onChange={this.change} />
           </div>
           <div className='estiloLogin'>
-            <Link to="/"><button onClick={this.validation}>Acessar</button></Link>
-          </div> 
+            <Link to="/NotFound"><button onClick={this.validation}>Acessar</button></Link>
+          </div>
+          <div className='estiloSubTitulo'>
+            {this.state.message}
+          </div>
+          <div>
+          <Link to="/cadastro"><button onClick={this.validation}>Cadastrar</button></Link>
+          </div>
         </div>
       </section>
     )
