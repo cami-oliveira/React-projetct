@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "./App.css";
+import firebase from '../../Firebase';
 
 
 class Login extends Component {
@@ -12,10 +12,7 @@ class Login extends Component {
       title: "Login",
       email: "",
       password: "",
-      successEmail: "eduardo.lino@pucpr.br",
-      successPassword: "123456",
-      message: "",
-      mainMessage: "Ainda não possiu cadastro? Cadastre-se aqui!"
+      message: "Você ainda não está cadastrado."
     }
 
     this.change = this.change.bind(this)
@@ -26,12 +23,19 @@ class Login extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  validation() {
-    if (this.state.successEmail === this.state.email && this.state.successPassword === this.state.password) {
-      this.setState({ message: "Acessado com sucesso!" });
-    } else {
-      this.setState({ message: "Usuário ou senha incorretos!" });
-    }
+   async validation() {
+
+    await  firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+    .then (()=> {
+      window.location.href = "./home";
+
+    })
+    .catch((erro)=>{
+
+      console.log("heloou")
+      
+
+    })
   }
 
   render() {
@@ -48,17 +52,8 @@ class Login extends Component {
               type="password" size="25" onChange={this.change} />
           </div>
           <div className='estiloLogin'>
-            <button onClick={this.validation}>Acessar</button>
-          </div>
-          <div className='estiloMensagem'>
-            {this.state.message}
-          </div>
-          <div className='estiloMensagem'>
-            {this.state.mainMessage}
-          </div>
-          <div className='estiloLogin'>
-            <button onClick={this.validation}>Cadastrar</button>
-          </div>
+            <Link to="/"><button onClick={this.validation}>Acessar</button></Link>
+          </div> 
         </div>
       </section>
     )

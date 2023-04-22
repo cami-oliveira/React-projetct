@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "./App.css";
 
 class NotFound extends Component {
     constructor(props) {
@@ -11,7 +10,7 @@ class NotFound extends Component {
         return (
             <div>
                 <h1>NotFound</h1>
-                <Link to="/"><button>Página Inicial</button></Link>
+                <Link to="/NotFound"><button>Página Inicial</button></Link>
             </div>
         )
     }

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "./App.css";
 import firebase from '../../Firebase';
 
 class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nome: "",
-            sobrenome: "",
+            name: "",
+            surname: "",
             birthDate: "",
             email: "",
             password: ""
@@ -23,13 +22,17 @@ class SignUp extends Component {
     }
 
     async validation() {
-        await firebase.firestore().collection("usuario").add({
-            nome: this.state.nome,
-            sobrenome: this.state.sobrenome,
-            birthDate: this.state.birthDate,
-            email: this.state.email,
-            password: this.state.password
-        })
+
+        await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then ( async (retorno) => {
+
+            await firebase.firestore().collection("usuario").doc(retorno.user.uid).set({
+                nome: this.state.name,
+                sobrenome: this.state.surname,
+                birthDate: this.state.birthDate
+            });
+
+        });
     }
 
     render() {
@@ -38,10 +41,10 @@ class SignUp extends Component {
                 <div className=''>
                     <h1>Página de Cadastro</h1>
                     <div>
-                        <input placeholder="Nome" name="nome" value={this.state.nome}
+                        <input placeholder="Nome" name="name" value={this.state.name}
                             type="text" size="25" onChange={this.change} />
                         <br />
-                        <input placeholder="Sobrenome" name="sobrenome" value={this.state.sobrenome}
+                        <input placeholder="Sobrenome" name="surname" value={this.state.surname}
                             type="text" size="25" onChange={this.change} />
                         <br />
                         <input placeholder="Data de Nascimento" name="birthDate" value={this.state.birthDate}
@@ -55,6 +58,9 @@ class SignUp extends Component {
                     </div>
                     <div className=''>
                         <button onClick={this.validation}>Cadastrar</button>
+                    </div>
+                    <div>
+                        <Link to="/"><button>Voltar</button></Link>
                     </div>
                 </div>
             </section>

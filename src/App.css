@@ -10,6 +10,19 @@
   color: wheat;
   font-size: xx-large;
   height: 7vh;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 15px;
+}
+
+.estiloSubTitulo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: wheat;
+  font-size: x-large;
+  height: 7vh;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 340px;
 }
 
 .estiloLogin {
