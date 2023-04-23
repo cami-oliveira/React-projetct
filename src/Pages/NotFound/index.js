@@ -6,7 +6,11 @@ import '../../App.css';
 class NotFound extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            errorMessage: "Usuário não encontrado. Você já possui cadastro?"
     }
+}
 
     render() {
         return (
@@ -14,7 +18,8 @@ class NotFound extends Component {
                 <div className='estilo'>
                     <h1 className='estiloMensagem'>Ops...</h1>
                     <div>
-                        <h2 className='estiloMensagem'>Usuário não encontrado. Você já possui cadastro? <br />
+                        <h2 className='estiloMensagem'>
+                            {this.state.errorMessage} <br /> 
                             Retorne para a página inicial.</h2>
                     </div>
                     <div className='estiloLettersButton'>
