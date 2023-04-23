@@ -43,16 +43,16 @@ class Home extends Component {
         return (
             <section className='background-component-Home' style={{ height: "100vh" }}>
                 <div className='estilo'>
-                    <div className='estiloMensagem'>
+                    <div className='estiloMensagemHome'>
                         Nome: {this.state.name}
                     </div>
-                    <div className='estiloMensagem'>
+                    <div className='estiloMensagemHome'>
                         Sobrenome: {this.state.surname}
                     </div>
-                    <div className='estiloMensagem'>
+                    <div className='estiloMensagemHome'>
                         Data de Nascimento: {this.state.birthDate}
                         <div />
-                        <div className='estiloSignUpButton'>
+                        <div className='estiloLettersButton'>
                             <Link to="/login"><button className='estiloButtonHome'>Voltar</button></Link>
                         </div>
                     </div>

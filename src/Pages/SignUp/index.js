@@ -49,8 +49,8 @@ class SignUp extends Component {
                             type="text" size="40" onChange={this.change} />
                     </div>
                     <div className='estiloSignUpPlaceholder'>
-                        <input className='estiloInput' placeholder="Data de Nascimento" name="birthDate" value={this.state.birthDate}
-                            type="text" size="40" onChange={this.change} />
+                        <input className='estiloInputDate' placeholder="Data de Nascimento" name="birthDate" value={this.state.birthDate}
+                            type="date" size="40" onChange={this.change} />
                     </div>
                     <div className='estiloSignUpPlaceholder'>
                         <input className='estiloInput' placeholder="E-mail" name="email" value={this.state.email}

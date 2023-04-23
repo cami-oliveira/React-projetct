@@ -15,7 +15,7 @@ class NotFound extends Component {
                         <h2 className='estiloMensagem'>Usuário não encontrado. Você já possui cadastro? <br />
                             Volte para a página inicial.</h2>
                     </div>
-                    <div className='estiloTitulo'>
+                    <div className='estiloLettersButton'>
                     <Link to="/login"><button className='estiloButtonNotFound'>Página Inicial</button></Link>
                     </div> 
                 </div>
