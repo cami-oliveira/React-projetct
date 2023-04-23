@@ -30,7 +30,7 @@ class Home extends Component {
 
                             name: retorno.data().name,
                             surname: retorno.data().surname,
-                            birthDate: retorno.data().birthDate
+                            birthDate: new Date(retorno.data().birthDate).toLocaleDateString()
                         });
                     });
             }
