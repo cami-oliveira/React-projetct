@@ -103,8 +103,8 @@
 
 .estiloTituloSignUp {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(236, 219, 188);
-  font-size: 35px;
+  color: rgb(241, 232, 213);
+  font-size: 40px;
   -webkit-text-stroke: 1px black;
   height: 7vh;
   text-align: center;
@@ -197,10 +197,10 @@
 }
 
 .background-component-SignUp {
-  background-image: url("https://images.indianexpress.com/2018/07/the-lord-of-the-rings759.jpg");
+  background-image: url("https://thepixelpost.com/content/images/wordpress/2022/05/seigneur-des-anneaux-jeu-mobile.jpg");
 
   height: 100%;
-  opacity: 0.93;
+  opacity: 0.90;
 
   background-position: center;
   background-repeat: no-repeat;
