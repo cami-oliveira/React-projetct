@@ -8,10 +8,18 @@ class NotFound extends Component {
 
     render() {
         return (
-            <div>
-                <h1>NotFound</h1>
-                <Link to="/NotFound"><button>Página Inicial</button></Link>
-            </div>
+            <section className='background-component-NotFound' style={{ height: "100vh" }}>
+                <div className='estilo'>
+                    <h1 className='estiloMensagem'>Ops...</h1>
+                    <div>
+                        <h2 className='estiloMensagem'>Usuário não encontrado. Você já possui cadastro? <br />
+                            Volte para a página inicial.</h2>
+                    </div>
+                    <div className='estiloTitulo'>
+                    <Link to="/login"><button className='estiloButtonNotFound'>Página Inicial</button></Link>
+                    </div> 
+                </div>
+            </section>
         )
     }
 }

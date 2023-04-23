@@ -32,7 +32,8 @@ class Login extends Component {
     })
     .catch((erro)=>{
 
-      console.log("heloou")
+      console.log("heloou");
+      window.location.href = "./NotFound";
       
 
     })
@@ -41,24 +42,25 @@ class Login extends Component {
   render() {
     return (
       <section className='background-component' style={{ height: "100vh" }}>
-        <div className='estilo'>
-          <h1 className='estiloTitulo'> {this.state.title} </h1>
+        <h1 className='estiloTitulo'> Bem vindo ao mundo mágico de Senhor dos Front! </h1>
+        <div className='estiloLoginCenter'>
+          <h1 className='estiloTituloLogin'> {this.state.title} </h1>
           <div className='estiloLogin'>
-            <input placeholder="E-mail" name="email" value={this.state.email}
-              type="text" size="25" onChange={this.change} />
+            <input className='estiloInput' placeholder="E-mail" name="email" value={this.state.email}
+              type="text" size="35" onChange={this.change} />
           </div>
           <div className='estiloLogin'>
-            <input placeholder="Senha" name="password" value={this.state.password}
-              type="password" size="25" onChange={this.change} />
+            <input className='estiloInput' placeholder="Senha" name="password" value={this.state.password}
+              type="password" size="35" onChange={this.change} />
           </div>
           <div className='estiloLogin'>
-            <Link to="/NotFound"><button onClick={this.validation}>Acessar</button></Link>
+            <button className='estiloButtonLogin' onClick={this.validation}>Acessar</button>
           </div>
           <div className='estiloSubTitulo'>
             {this.state.message}
           </div>
-          <div>
-          <Link to="/cadastro"><button onClick={this.validation}>Cadastrar</button></Link>
+          <div className='estiloLogin'>
+          <Link to="/cadastro"><button className='estiloButtonLogin'>Cadastrar</button></Link>
           </div>
         </div>
       </section>

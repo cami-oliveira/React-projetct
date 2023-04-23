@@ -1,9 +1,83 @@
+.estiloLoginCenter {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 95px;
+}
+
 .estilo {
   text-align: center;
   margin-top: 0;
-  padding-top: 225px; 
+  padding-top: 225px;
 }
 
+.estiloSignUp {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+.estiloButtonSignUp {
+  background-color: #e5ded0;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.estiloButtonLogin {
+  background-color: #e7e3d2;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.estiloButtonNotFound {
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.estiloButtonHome {
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 45px 2px;
+  cursor: pointer;
+}
+
+
+.estiloTituloLogin {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: wheat;
+  font-size: xx-large;
+  height: 5vh;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 15px;
+}
 
 .estiloTitulo {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -15,22 +89,51 @@
   padding-top: 15px;
 }
 
+.estiloTituloSignUp {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: whitesmoke;
+  font-size: xx-large;
+  height: 7vh;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 15px;
+}
+
 .estiloSubTitulo {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: wheat;
   font-size: x-large;
-  height: 7vh;
+  height: 5.5vh;
   text-align: center;
   margin-top: 0;
+  padding-top: 15px;
 }
 
 .estiloLogin {
   align-items: center;
-  height: 3.5vh;
+  height: 6vh;
+}
+
+.estiloSignUpPlaceholder {
+  align-items: center;
+  height: 6vh;
+}
+
+.estiloInput {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+}
+
+.estiloSignUpPlaceButtons {
+  align-items: center;
+  height: 4vh;
+  margin-top: 3vh;
 }
 
 .estiloMensagem {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: x-large;
   font-style: italic;
   color: whitesmoke;
@@ -43,7 +146,39 @@
 .background-component {
   background-image: url("https://i.pinimg.com/originals/be/e0/b4/bee0b41561164c5cf6318c0be184b195.jpg");
 
-  height: 100%; 
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-component-NotFound {
+  background-image: url("https://returntomoria.com/img/HOME_BACKGROUND.png");
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-component-SignUp {
+  background-image: url("https://images.indianexpress.com/2018/07/the-lord-of-the-rings759.jpg");
+
+  height: 100%;
+  opacity: 0.93;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-component-Home {
+  background-image: url("https://wallpaperset.com/w/full/5/8/9/153757.jpg");
+
+  height: 100%;
+  opacity: 0.95;
 
   background-position: center;
   background-repeat: no-repeat;

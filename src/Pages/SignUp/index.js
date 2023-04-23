@@ -24,43 +24,47 @@ class SignUp extends Component {
     async validation() {
 
         await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-        .then ( async (retorno) => {
+            .then(async (retorno) => {
 
-            await firebase.firestore().collection("usuario").doc(retorno.user.uid).set({
-                nome: this.state.name,
-                sobrenome: this.state.surname,
-                birthDate: this.state.birthDate
+                await firebase.firestore().collection("usuario").doc(retorno.user.uid).set({
+                    name: this.state.name,
+                    surname: this.state.surname,
+                    birthDate: this.state.birthDate
+                });
+
             });
-
-        });
     }
 
     render() {
         return (
-            <section className=''>
-                <div className=''>
-                    <h1>Página de Cadastro</h1>
-                    <div>
-                        <input placeholder="Nome" name="name" value={this.state.name}
-                            type="text" size="25" onChange={this.change} />
-                        <br />
-                        <input placeholder="Sobrenome" name="surname" value={this.state.surname}
-                            type="text" size="25" onChange={this.change} />
-                        <br />
-                        <input placeholder="Data de Nascimento" name="birthDate" value={this.state.birthDate}
-                            type="text" size="25" onChange={this.change} />
-                        <br />
-                        <input placeholder="E-mail" name="email" value={this.state.email}
-                            type="text" size="25" onChange={this.change} />
-                        <br />
-                        <input placeholder="Senha" name="password" value={this.state.password}
-                            type="password" size="25" onChange={this.change} />
+            <section className='background-component-SignUp' style={{ height: "100vh" }}>
+                <div className='estiloSignUp'>
+                    <h1 className='estiloTituloSignUp'>Página de Cadastro</h1>
+                    <div className='estiloSignUpPlaceholder'>
+                        <input className='estiloInput' placeholder="Nome" name="name" value={this.state.name}
+                            type="text" size="40" onChange={this.change} />
                     </div>
-                    <div className=''>
-                        <button onClick={this.validation}>Cadastrar</button>
+                    <div className='estiloSignUpPlaceholder'>
+                        <input className='estiloInput' placeholder="Sobrenome" name="surname" value={this.state.surname}
+                            type="text" size="40" onChange={this.change} />
                     </div>
-                    <div>
-                        <Link to="/"><button>Voltar</button></Link>
+                    <div className='estiloSignUpPlaceholder'>
+                        <input className='estiloInput' placeholder="Data de Nascimento" name="birthDate" value={this.state.birthDate}
+                            type="text" size="40" onChange={this.change} />
+                    </div>
+                    <div className='estiloSignUpPlaceholder'>
+                        <input className='estiloInput' placeholder="E-mail" name="email" value={this.state.email}
+                            type="text" size="40" onChange={this.change} />
+                    </div>
+                    <div className='estiloSignUpPlaceholder'>
+                        <input className='estiloInput' placeholder="Senha" name="password" value={this.state.password}
+                            type="password" size="40" onChange={this.change} />
+                    </div>
+                    <div className='estiloSignUpPlaceButtons'>
+                        <Link to="/"><button className='estiloButtonSignUp' onClick={this.validation}>Cadastrar</button></Link>
+                    </div>
+                    <div className='estiloSignUpPlaceButtons'>
+                        <Link to="/"><button className='estiloButtonSignUp'>Voltar</button></Link>
                     </div>
                 </div>
             </section>

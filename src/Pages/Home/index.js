@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../Firebase';
 
-class Home extends Component{
+class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -17,22 +17,22 @@ class Home extends Component{
 
     async componentDidMount() {
 
-        await firebase.auth().onAuthStateChanged(async (usuario)=> {
+        await firebase.auth().onAuthStateChanged(async (usuario) => {
 
-            if(usuario) {
+            if (usuario) {
                 var uid = usuario.uid;
 
 
                 await firebase.firestore().collection("usuario").doc(uid).get()
-                .then((retorno)=>{
+                    .then((retorno) => {
 
-                    this.setState({
+                        this.setState({
 
-                        name: retorno.data().name,
-                        surname: retorno.data().surname,
-                        birthDate: retorno.data().birthDate
+                            name: retorno.data().name,
+                            surname: retorno.data().surname,
+                            birthDate: retorno.data().birthDate
+                        });
                     });
-                });
             }
 
         });
@@ -41,12 +41,24 @@ class Home extends Component{
 
     render() {
         return (
-            <div>
-                Nome: {this.state.name} <br/>
-                Sobrenome: {this.state.surname} <br/>
-                Data de Nascimento: {this.state.birthDate} <br/>
-                <Link to="/login"><button>Voltar</button></Link>
-            </div>
+            <section className='background-component-Home' style={{ height: "100vh" }}>
+                <div className='estilo'>
+                    <div className='estiloMensagem'>
+                        Nome: {this.state.name}
+                    </div>
+                    <div className='estiloMensagem'>
+                        Sobrenome: {this.state.surname}
+                    </div>
+                    <div className='estiloMensagem'>
+                        Data de Nascimento: {this.state.birthDate}
+                        <div />
+                        <div className='estiloSignUpButton'>
+                            <Link to="/login"><button className='estiloButtonHome'>Voltar</button></Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         )
     }
 }
